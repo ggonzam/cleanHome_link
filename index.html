@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CleanHome | Aseo y mantención</title>
+
+  <meta
+    name="description"
+    content="Servicios de aseo externalizado y mantención para edificios.
+    Contacta a CleanHome y solicita tu cotización."
+  >
+    <link rel="stylesheet" href="style.css">
+  
+   
+  
+</head>
+
+<body>
+  <main class="card">
+    <img
+      class="logo"
+      src="clearhome_logo.png"
+      alt="CleanHome — Servicios integrales"
+    >
+
+    <h1>Aseo y mantención para tu edificio</h1>
+
+    <p class="intro">
+      Nos encargamos del servicio, para que tú te concentres
+      en la administración de tus espacios.
+    </p>
+
+    <section class="services" aria-label="Nuestros servicios">
+      <h2>Externalización de aseo</h2>
+      <p>
+        Para edificios, condominios, oficinas y otras instalaciones.
+        Nosotros aportamos el personal, los implementos y los insumos.
+        Tú simplificas la gestión y pagas una factura a fin de mes.
+      </p>
+
+      <h2>Mantención de edificios</h2>
+      <p>
+        Cuéntanos qué necesita tu edificio y consulta
+        por nuestro servicio de mantención.
+      </p>
+    </section>
+
+    <nav aria-label="Contacto y redes sociales">
+      <a
+        id="aseo"
+        class="button"
+        href="https://wa.me/56941583127?text=Hola%2C%20CleanHome.%20Me%20interesa%20cotizar%20el%20servicio%20de%20externalizaci%C3%B3n%20de%20aseo."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Cotizar aseo por WhatsApp
+      </a>
+
+      <a
+        id="mantencion"
+        class="button"
+        href="https://wa.me/56941583127?text=Hola%2C%20CleanHome.%20Me%20interesa%20cotizar%20un%20servicio%20de%20mantenci%C3%B3n%20para%20un%20edificio."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Cotizar mantención por WhatsApp
+      </a>
+
+      <a
+        class="button secondary"
+        href="https://www.instagram.com/cleanhome.chile?psln=cGFyZDV5eHRudm05"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visita nuestro Instagram
+      </a>
+    </nav>
+
+    <footer>
+      CleanHome · Servicios integrales<br>
+      <a href="tel:+56941583127">+56 9 4158 31 27</a>
+    </footer>
+  </main>
+
+  <script>
+    const telefono = "56941583127";
+
+    const mensajes = {
+      aseo:
+        "Hola, CleanHome. Me interesa cotizar el servicio de " +
+        "externalización de aseo para un edificio, condominio, " +
+        "oficina u otra infraestructura. " +
+        "¿Qué información necesitan para preparar una cotización?",
+
+      mantencion:
+        "Hola, CleanHome. Me interesa cotizar un servicio de " +
+        "mantención para un edificio. Quisiera consultar si " +
+        "realizan el trabajo que necesito y solicitar una cotización."
+    };
+
+    for (const [id, mensaje] of Object.entries(mensajes)) {
+      document.getElementById(id).href =
+        `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    }
+  </script>
+</body>
+</html>
